@@ -1,0 +1,39 @@
+<div class="col-md-6 offset-md-3">
+    <div class="card-header mt-4">
+        Formulario
+    </div>
+    <div class="card card-body">
+        <form [formGroup]="formularioUsuario" (ngSubmit)="enviarDatos()">
+            <div class="mb-3">
+              <label for="" class="form-label">Nombres</label>
+              <input type="text" maxlength="50" class="form-control" required
+              formControlName="nombres" placeholder="Escribe tus nombres">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Apellidos</label>
+              <input type="text" maxlength="50" required
+                class="form-control" formControlName="apellidos" placeholder="Escribe tus apellidos">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Correo Electrónico</label>
+              <input type="email" required
+                class="form-control" formControlName="email" placeholder="Escribe tu correo electrónico">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Número de control</label>
+              <input type="number" min="1" required
+                class="form-control" formControlName="n_control" placeholder="Escribe el número de control">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="verificacion">
+              <label class="form-check-label">
+                Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos.
+              </label>
+            </div>
+            <div class="btn-group" role="group">
+                <button type="submit" class="btn btn-success">Guardar</button>
+                <button (click)="cancelar()" class="btn btn-primary">Cancelar</button>
+            </div>
+        </form>
+    </div>
+</div>

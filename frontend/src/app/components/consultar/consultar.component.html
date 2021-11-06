@@ -1,0 +1,41 @@
+<div class="container main-content p-3 mt-5">
+    <form [formGroup]="numeroControl" (ngSubmit)="consultarUsuario()">
+        <div class="row g-1 mt-1">
+            <div class="col-md-9"> <input formControlName="n_control" type="number" min="1" placeholder="Escribe el número de control del usuario a buscar..." class="form-control"> </div>
+            <div class="col-md-3"> <button type="submit" class="search btn btn-primary w-100 text-uppercase">Buscar</button> </div>
+        </div>
+    </form>
+
+    <div class="card-header mt-4">
+        Actualizar Usuario
+    </div>
+    <div class="card card-body">
+        <form [formGroup]="formUsuario" (ngSubmit)="actualizarUsuario()"> 
+            <div class="mb-3">
+              <label for="" class="form-label">Nombres</label>
+              <input type="text" maxlength="50" class="form-control" required
+              placeholder="Escribe tus nombres" formControlName="nombres">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Apellidos</label>
+              <input type="text" maxlength="50" required
+                class="form-control" placeholder="Escribe tus apellidos" formControlName="apellidos">
+            </div>
+            <div class="mb-3">
+              <label for="" class="form-label">Correo Electrónico</label>
+              <input type="email" required
+                class="form-control" placeholder="Escribe tu correo electrónico" formControlName="email">
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" formControlName="verificacion">
+              <label class="form-check-label">
+                Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos.
+              </label>
+            </div>
+            <div class="btn-group" role="group" aria-label="">
+                <button type="submit" class="btn btn-info">Actualizar</button>
+                <button (click)="eliminarUsuario()" class="btn btn-danger">Eliminar</button>
+            </div>
+        </form>
+    </div>
+</div>

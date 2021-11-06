@@ -15,6 +15,7 @@ Para el desarrollo del fronent de este trabajo, se utiliza el framework Angular 
 > - Un número de control, con un control de tipo numérico.
 > - Una casilla de verificación con el texto "Declaro haber leído y aceptar las condiciones generales del programa y la normativa sobre protección de datos".
 > - Un botón de envío.
+
 ![Image text](https://github.com/Kairo001/PruebaDesarrollador/blob/main/vistas/Vista1.png)
 2. **Segunda vista:** Una página que permita consultar, actualizar y eliminar la información registrada en el formulario.
 ![Image text](https://github.com/Kairo001/PruebaDesarrollador/blob/main/vistas/Vista2.png)
